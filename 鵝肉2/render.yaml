@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: greenfield-goose
+    runtime: node
+    buildCommand: npm install && npm run lint && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
